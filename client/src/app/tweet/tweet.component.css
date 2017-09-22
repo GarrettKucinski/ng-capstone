@@ -1,0 +1,14 @@
+.card {
+  width: 40rem;
+  border: 1px solid #cccccc;
+  margin-bottom: 30px;
+  box-shadow: 1px 1px 4px rgba(1, 1, 1, 0.1);
+}
+
+.card-block {
+  padding: 25px;
+}
+
+img {
+  max-width: 100%;
+}
