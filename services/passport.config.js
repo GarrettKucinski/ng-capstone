@@ -10,8 +10,8 @@ const TwitterStrategy = require('passport-twitter').Strategy;
 const User = require('../models/user');
 
 const encrypt = text => {
-    const cipher = crypto.createCipher( algorithm, password )
-    let crypted = cipher.update( text, 'utf8', 'hex' )
+    const cipher = crypto.createCipher( algorithm, password );
+    let crypted = cipher.update( text, 'utf8', 'hex' );
     crypted += cipher.final( 'hex' );
     return crypted;
 };
