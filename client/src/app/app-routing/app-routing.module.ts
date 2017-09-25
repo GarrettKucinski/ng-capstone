@@ -1,3 +1,4 @@
+import { AuthGuardService } from '../services/auth-guard.service';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
@@ -6,7 +7,7 @@ import { RecommendationsComponent } from '../recommendations/recommendations.com
 
 const appRoutes: Routes = [
     { path: '', component: HomeComponent, pathMatch: 'full' },
-    { path: 'recommendations', component: RecommendationsComponent}
+    { path: 'recommendations', component: RecommendationsComponent, canActivate: [AuthGuardService]}
 ]
 
 @NgModule({

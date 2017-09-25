@@ -5,6 +5,7 @@ import { HttpModule } from '@angular/http';
 
 import { DataService } from './services/data.service';
 import { AuthService } from './services/auth.service';
+import { AuthGuardService } from './services/auth-guard.service';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -25,7 +26,7 @@ import { TweetComponent } from './tweet/tweet.component';
     AppRoutingModule,
     HttpModule
   ],
-  providers: [AuthService, DataService],
+  providers: [AuthService, DataService, AuthGuardService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

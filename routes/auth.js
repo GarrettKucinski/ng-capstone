@@ -19,6 +19,9 @@ router.get('/login/return', passport.authenticate('twitter'), (req, res) => {
 
 router.get('/logout', (req, res, next) => {
     req.logout();
+    req.session.destroy(err => {
+      console.log(err);
+    });
     res.redirect('/');
 });
 

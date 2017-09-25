@@ -14,9 +14,22 @@ const decrypt = text => {
 };
 
 router.get('/', (req, res, next) => {
+  if(req.user) {
     res.json({
+        user: {
+          name: req.user.name,
+          username: req.user.username,
+          location: req.user.location,
+          photoUrl: req.user.photoUrl,
+          profile: req.user.profile
+        },
         token: req.session.jwt
     });
+  } else {
+    res.json({
+      user: null
+    });
+  }
 });
 
 router.get('/tweets', (req, res, next) => {

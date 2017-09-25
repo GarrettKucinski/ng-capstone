@@ -16,7 +16,8 @@ const authRoutes = require('./routes/auth');
 mongoose.connect("mongodb://localhost:27017/ng-capstone");
 const db = mongoose.connection;
 
-require('./services/passport.config');
+// Set up passport and strategies
+require('./config/passport.config');
 
 const app = express();
 
@@ -47,9 +48,9 @@ app.use(passport.session());
 app.use('/api', apiRoutes);
 app.use('/auth', authRoutes);
 
-// catch 404 and forward to error handler
-app.use(function(req, res, next) {
-    res.render('index');
+// Catch all other routes and return the index file
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'dist/index.html'));
 });
 
 module.exports = app;

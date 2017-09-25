@@ -1,2 +1,7 @@
-<a [routerLink]="['/']">Home</a>
-<a [routerLink]="['recommendations']">Recommendations</a>
+<h1>{{ title }}</h1>
+<hr>
+<ul class="nav nav-pills" *ngIf="loggedIn">
+  <li routerLinkActive="active"><a [routerLink]="['/']">Home</a></li>
+  <li routerLinkActive><a [routerLink]="['recommendations']">Recommendations</a></li>
+  <li><a href="/auth/logout" (click)="onLogOut()">LogOut</a></li>
+</ul>

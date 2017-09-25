@@ -7,12 +7,6 @@ import 'rxjs/Rx';
 export class DataService {
     constructor(private http: Http) {}
 
-    getUser() {
-        return this.http.get('/api')
-            .map((response: Response) => response.json())
-            .catch((error: Response) => Observable.throw(error.json()));
-    }
-
     getTweets() {
         return this.http.get('/api/tweets')
             .map((response: Response) => response.json())

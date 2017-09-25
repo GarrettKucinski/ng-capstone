@@ -1,16 +1,30 @@
 import { Component, OnInit } from '@angular/core';
 
+import { AuthService } from '../services/auth.service';
+
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
+  title = 'Thought Twaffic';
+  loggedIn;
 
-
-  constructor() { }
+  constructor(private authService: AuthService) { }
 
   ngOnInit() {
+    this.authService.userDidAuthenticate.subscribe((authenticated: boolean) => {
+      if(authenticated) {
+        this.loggedIn = true;
+      } else {
+        this.loggedIn = false;
+      }
+    });
+  }
+
+  onLogOut() {
+    this.authService.logOutUser();
   }
 
 }
