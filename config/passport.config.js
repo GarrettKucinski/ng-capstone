@@ -7,7 +7,7 @@ const password = process.env.SESSION_SECRET;
 const passport = require('passport');
 const TwitterStrategy = require('passport-twitter').Strategy;
 
-const User = require('../models/user');
+const User = require('../models/User');
 
 const encrypt = text => {
     const cipher = crypto.createCipher(algorithm, password);
