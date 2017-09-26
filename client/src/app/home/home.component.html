@@ -1,11 +1,21 @@
-<div *ngIf="user" class="col-md-6">
+<div *ngIf="loggedIn" class="col-md-6">
   <h1><img src="{{ user.photoUrl }}" alt="">{{ user.name }} <span>{{ user.username }}</span></h1>
   <p>{{ user.location }}</p>
 </div>
 
-<div *ngIf="!user" class="col-md-6 col-md-offset-3">
-  <div class="card">
-    <h1>Welcome to Thought Twaffic</h1>
-    <a href="/auth/login" class="btn btn-default">Log In with Twitter</a>
+<div *ngIf="!loggedIn" class="col-md-6 col-md-offset-3">
+  <div class="modal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <header>
+              <h1 class="welcome-message modal-title">Welcome!</h1>
+          </header>
+        </div>
+        <div class="modal-body">
+          <a href="/auth/login" class="btn btn-info sign-in-button">Log In with Twitter</a>
+        </div>
+      </div>
+    </div>
   </div>
 </div>

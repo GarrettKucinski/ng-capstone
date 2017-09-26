@@ -8,6 +8,7 @@ import { AuthService } from '../services/auth.service';
     styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
+    loggedIn;
     user: {};
     constructor(private authService: AuthService, private dataService: DataService) {}
     ngOnInit() {
@@ -18,5 +19,14 @@ export class HomeComponent implements OnInit {
               this.user = data;
             }
         );
+
+        this.authService.userDidAuthenticate.subscribe((authenticated: boolean) => {
+          if(authenticated) {
+            this.loggedIn = true;
+          } else {
+            this.loggedIn = false;
+          }
+        });
+
     }
 }
