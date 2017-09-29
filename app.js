@@ -30,7 +30,6 @@ app.set('view engine', 'pug');
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
-app.use(express.static(path.join(__dirname, 'public')));
 
 const sessionOptions = {
     secret: process.env.SESSION_SECRET,
@@ -49,8 +48,13 @@ app.use('/api', apiRoutes);
 app.use('/auth', authRoutes);
 
 // Catch all other routes and return the index file
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'client/dist/index.html'));
-});
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static(path.join(__dirname, 'client2/dist')));
+  app.get('*', (req, res) => {
+      res.sendFile(path.resolve(__dirname, 'client', 'dist', 'index.html'));
+  });
+} else {
+  app.use(express.static(path.join(__dirname, 'public')));
+}
 
 module.exports = app;
