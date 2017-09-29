@@ -8,7 +8,7 @@ import { RecommendationsComponent } from '../recommendations/recommendations.com
 const appRoutes: Routes = [
     { path: '', component: HomeComponent, pathMatch: 'full' },
     { path: 'recommendations', component: RecommendationsComponent, canActivate: [AuthGuardService]}
-]
+];
 
 @NgModule({
     imports: [RouterModule.forRoot(appRoutes)],

@@ -13,7 +13,7 @@ const apiRoutes = require('./routes/api');
 const authRoutes = require('./routes/auth');
 
 // mongodb connection
-mongoose.connect("mongodb://localhost:27017/ng-capstone");
+mongoose.connect(process.env.CAPSTONE_MONGO_CONNECTION_STRING);
 const db = mongoose.connection;
 
 // Set up passport and strategies
