@@ -1,3 +1,2 @@
-<h1>This is the recommendation component served by Angular</h1>
-<pre>{{ tweets | json }}</pre>
-<!-- <app-tweet-card *ngFor="let tweet of tweets" [tweet]="tweet"></app-tweet-card> -->
+<h1>Yelp Recommendations for </h1>
+<app-tweet *ngFor="let tweet of tweets.businesses" [tweet]="tweet"></app-tweet>

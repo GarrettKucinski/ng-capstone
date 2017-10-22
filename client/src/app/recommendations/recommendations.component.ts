@@ -14,12 +14,8 @@ export class RecommendationsComponent implements OnInit {
     ngOnInit() {
         // Called after the constructor, initializing input properties, and the first call to ngOnChanges.
         // Add 'implements OnInit' to the class.
-        // this.dataService.getUser().subscribe(
-        //     data => this.user = data.user
-        // );
 
         this.dataService.getTweets().subscribe(
-            // tweets => this.tweets = tweets.result.data.statuses
             tweets => this.tweets = tweets
         );
     }

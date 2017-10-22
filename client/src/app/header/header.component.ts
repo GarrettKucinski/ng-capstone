@@ -8,7 +8,7 @@ import { AuthService } from '../services/auth.service';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-  title = 'Thought Twaffic';
+  title = 'Welcome!';
   loggedIn;
 
   constructor(private authService: AuthService) { }

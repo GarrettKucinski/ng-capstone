@@ -12,7 +12,7 @@ router.get('/', (req, res, next) => {
 router.get('/login', passport.authenticate('twitter'));
 
 router.get('/login/return', passport.authenticate('twitter'), (req, res) => {
-    const jwtToken = jwt.sign({ userID: req.user.id }, process.env.SESSION_SECRET, { expiresIn: 7200 });
+    const jwtToken = jwt.sign({ userID: req.user.id }, process.env.SECRET, { expiresIn: 7200 });
     req.session.jwt = jwtToken;
     res.redirect('/');
 });

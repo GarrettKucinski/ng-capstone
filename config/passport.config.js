@@ -2,7 +2,7 @@
 
 const crypto = require('crypto');
 const algorithm = 'aes-256-ctr';
-const password = process.env.SESSION_SECRET;
+const password = process.env.SECRET;
 
 const passport = require('passport');
 const TwitterStrategy = require('passport-twitter').Strategy;
