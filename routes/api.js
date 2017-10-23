@@ -34,21 +34,18 @@ router.get('/', (req, res, next) => {
   }
 });
 
-router.get('/tweets', (req, res, next) => {
+router.get('/reviews', (req, res, next) => {
     const accessToken = decrypt(req.user.token);
     const accessTokenSecret = decrypt(req.user.tokenSecret);
     const twit = require('../config/twitConfig')(accessToken, accessTokenSecret);
 
-    twit.get('account/verify_credentials')
-      .then(user => {
-        superagent.get('https://api.yelp.com/v3/businesses/search')
-          .set('Authorization', `Bearer ${ process.env.YELP_ACCESS_TOKEN }`)
-          .query({ term: 'restaurant'})
-          .query({ location: user.data.location })
-          .end((err, data) => {
-            if(err) { console.log(err); }
-            res.send(data.text);
-          });
+    superagent.get('https://api.yelp.com/v3/businesses/search')
+      .set('Authorization', `Bearer ${ process.env.YELP_ACCESS_TOKEN }`)
+      .query({ term: 'restaurant'})
+      .query({ location: req.user.location })
+      .end((err, data) => {
+        if(err) { console.log(err); }
+        res.send(data.text);
       });
 });
 

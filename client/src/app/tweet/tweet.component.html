@@ -1,7 +1,9 @@
-<div class="card">
-  <img class="card-img-top" src="{{ tweet.image_url }}" alt="Card image cap" *ngIf="tweet.name">
-  <div class="card-block">
-      <h4 class="card-title">{{ tweet.name }}</h4>
-      <p class="card-text">{{ tweet.text }}</p>
+<div class="business-card">
+  <div class="business-image-container">
+    <img class="card-img" src="{{ business.image_url }}" alt="Card image caption">
+  </div>
+  <div class="business-card-content">
+      <h4 class="card-title">{{ business.name }}</h4>
+      <p class="card-text">{{ business.text }}</p>
   </div>
 </div>

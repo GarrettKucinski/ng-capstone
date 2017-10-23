@@ -1,2 +1,5 @@
 <h1>Yelp Recommendations for </h1>
-<app-tweet *ngFor="let tweet of tweets.businesses" [tweet]="tweet"></app-tweet>
+<agm-map [latitude]="startingLat" [longitude]="startingLong" [zoom]="13">
+  <agm-marker *ngFor="let business of yelpData.businesses" [latitude]="business.coordinates.latitude" [longitude]="business.coordinates.longitude"></agm-marker>
+</agm-map>
+<app-tweet *ngFor="let business of yelpData.businesses" [business]="business"></app-tweet>

@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing/app-routing.module';
 import { HttpModule } from '@angular/http';
+import { AgmCoreModule } from '@agm/core';
 
 import { DataService } from './services/data.service';
 import { AuthService } from './services/auth.service';
@@ -24,7 +25,10 @@ import { TweetComponent } from './tweet/tweet.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpModule
+    HttpModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyDW1vNEEmNaFZ_jUXqybkfOltKyZjxHYX4'
+    })
   ],
   providers: [AuthService, DataService, AuthGuardService],
   bootstrap: [AppComponent]
