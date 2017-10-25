@@ -1,0 +1,8 @@
+<div class="business-card">
+  <div class="business-image-container" [ngStyle]="{ 'backgroundImage': 'url(' +  business.image_url + ')'}"></div>
+  <div class="business-card-content">
+      <h4 class="card-title">{{ business.name }}</h4>
+      <p class="card-text"> <span class="card-label">Price:</span> {{ business.price }}</p>
+      <p><span class="card-label">Rating:</span> {{ business.rating}} stars</p>
+  </div>
+</div>

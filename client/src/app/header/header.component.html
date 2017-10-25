@@ -1,10 +1,14 @@
-<h1>{{ title }}</h1>
-<div *ngIf="loggedIn" class="col-md-6">
-  <h1><img src="{{ user.photoUrl }}" alt="">{{ user.name }} <span>{{ user.username }}</span></h1>
-</div>
+<header class="app-header">
+  <h1 *ngIf="!loggedIn">{{ title }}</h1>
+  <div *ngIf="loggedIn" class="user-info">
+    <span class="user-image"><img src="{{ user.photoUrl }}" alt="photo of user.name"></span> <h2 class="user-name">{{ user.name }}</h2>
+  </div>
+  <ul class="nav" *ngIf="loggedIn">
+    <li>
+      <a class="btn primary logout-button" href="/auth/logout" (click)="onLogOut()">LogOut</a>
+    </li>
+  </ul>
+</header>
 
 <hr>
-<ul class="nav nav-pills" *ngIf="loggedIn">
-  <li routerLinkActive><a [routerLink]="['recommendations']">Recommendations</a></li>
-  <li><a href="/auth/logout" (click)="onLogOut()">LogOut</a></li>
-</ul>
+

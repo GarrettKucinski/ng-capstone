@@ -12,7 +12,7 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
 import { RecommendationsComponent } from './recommendations/recommendations.component';
-import { TweetComponent } from './tweet/tweet.component';
+import { BusinessComponent } from './business/business.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +20,7 @@ import { TweetComponent } from './tweet/tweet.component';
     HeaderComponent,
     HomeComponent,
     RecommendationsComponent,
-    TweetComponent
+    BusinessComponent
   ],
   imports: [
     BrowserModule,

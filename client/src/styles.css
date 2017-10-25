@@ -15,3 +15,17 @@ ul {
   padding: 0;
   margin: 0;
 }
+
+.btn.primary{
+  text-decoration: none;
+  color: white;
+  background: slategray;
+  padding: 10px 20px;
+  display: block;
+  transition: background 0.5s;
+}
+
+.btn.primary:hover {
+  transition: background 0.2s;
+  background: #1c2f2f;
+}

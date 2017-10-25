@@ -1,5 +1,10 @@
-<h1>Yelp Recommendations for </h1>
-<agm-map [latitude]="startingLat" [longitude]="startingLong" [zoom]="13">
-  <agm-marker *ngFor="let business of yelpData.businesses" [latitude]="business.coordinates.latitude" [longitude]="business.coordinates.longitude"></agm-marker>
-</agm-map>
-<app-tweet *ngFor="let business of yelpData.businesses" [business]="business"></app-tweet>
+<div class="recommendations-container">
+  <div class="map-container">
+    <h1>Yelp Recommendations for {{ yelpData.businesses[0].location.city }}</h1>
+    <agm-map [latitude]="startingLat" [longitude]="startingLong" [zoom]="13" [scrollwheel]="false">
+      <agm-marker *ngFor="let business of yelpData.businesses" [latitude]="business.coordinates.latitude" [longitude]="business.coordinates.longitude"></agm-marker>
+    </agm-map>
+  </div>
+
+  <app-business *ngFor="let business of yelpData.businesses" [business]="business"></app-business>
+</div>
