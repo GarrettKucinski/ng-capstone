@@ -1,5 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
 
+/* ------------------------------------------------------------------------------
+    General application wide styles
+------------------------------------------------------------------------------ */
 body {
   background: #2b3e50;
   color: #ffffff;
@@ -16,6 +19,10 @@ ul {
   margin: 0;
 }
 
+
+/* ------------------------------------------------------------------------------
+   Helper classes for reusable styles
+------------------------------------------------------------------------------ */
 .btn.primary{
   text-decoration: none;
   color: white;

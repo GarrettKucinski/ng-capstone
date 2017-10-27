@@ -6,5 +6,7 @@
     </agm-map>
   </div>
 
-  <app-business *ngFor="let business of yelpData.businesses" [business]="business"></app-business>
+  <div class="business-card-container">
+    <app-business *ngFor="let business of yelpData.businesses" [business]="business"></app-business>
+  </div>
 </div>
