@@ -17,6 +17,10 @@ agm-map {
   margin-bottom: 40px;
 }
 
+/* ------------------------------------------------------------------------------
+   Responsive style rules for recommendations component
+------------------------------------------------------------------------------ */
+
 @media screen and (min-width: 675px) {
   .business-card-container {
     grid-template-columns: repeat(2, 1fr);

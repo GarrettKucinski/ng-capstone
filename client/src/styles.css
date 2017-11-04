@@ -19,6 +19,11 @@ ul {
   margin: 0;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 
 /* ------------------------------------------------------------------------------
    Helper classes for reusable styles
@@ -35,4 +40,12 @@ ul {
 .btn.primary:hover {
   transition: background 0.2s;
   background: #1c2f2f;
+}
+
+/* ------------------------------------------------------------------------------
+   Styling for app components
+------------------------------------------------------------------------------ */
+
+.agm-info-window-content {
+  color: slategray;
 }

@@ -41,7 +41,8 @@ router.get('/reviews', (req, res, next) => {
 
     superagent.get('https://api.yelp.com/v3/businesses/search')
       .set('Authorization', `Bearer ${ process.env.YELP_ACCESS_TOKEN }`)
-      .query({ term: 'restaurant'})
+      // .query({ term: 'restaurant'})
+      .query({ limit: 50})
       .query({ location: req.user.location })
       .end((err, data) => {
         if(err) { console.log(err); }

@@ -185,7 +185,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".business-card {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: column;\n          flex-direction: column;\n  border: 1px solid #cccccc;\n  box-shadow: 1px 1px 4px rgba(1, 1, 1, 0.3);\n  background: ghostwhite;\n  color: #555555;\n  margin-bottom: 20px;\n  height: 100%;\n}\n\n.business-image-container {\n  width: 100%;\n  height: 150px;\n  background-size: cover;\n  background-repeat: no-repeat;\n  background-position: center;\n}\n\n.business-card-content {\n  padding: 20px;\n}\n\n.card-label {\n  font-weight: bold;\n}\n\n.card-title {\n  font-size: 2rem;\n  margin: 0;\n}\n", ""]);
+exports.push([module.i, ".business-card {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: column;\n          flex-direction: column;\n  box-shadow: 1px 1px 4px rgba(1, 1, 1, 0.3);\n  background: rgb(255, 255, 247);\n  color: #555555;\n  height: 100%;\n}\n\n.business-image-container {\n  width: 100%;\n  height: 150px;\n  background-size: cover;\n  background-repeat: no-repeat;\n  background-position: center;\n}\n\n.business-card-content {\n  padding: 20px;\n}\n\n.card-label {\n  font-weight: bold;\n}\n\n.card-title {\n  font-size: 1.75rem;\n  margin: 0;\n  color: rgb(34, 137, 178);\n  padding-bottom: 20px;\n  border-bottom: 1px solid #ececec;\n}\n\n.card-text {\n  color: slategray;\n}\n", ""]);
 
 // exports
 
@@ -198,7 +198,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/business/business.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"business-card\">\n  <div class=\"business-image-container\" [ngStyle]=\"{ 'backgroundImage': 'url(' +  business.image_url + ')'}\"></div>\n  <div class=\"business-card-content\">\n      <h4 class=\"card-title\">{{ business.name }}</h4>\n      <p class=\"card-text\"> <span class=\"card-label\">Price:</span> {{ business.price }}</p>\n      <p><span class=\"card-label\">Rating:</span> {{ business.rating}} stars</p>\n  </div>\n</div>\n"
+module.exports = "<div class=\"business-card\">\n  <a href=\"\">\n    <div class=\"business-image-container\" [ngStyle]=\"{ 'backgroundImage': 'url(' +  business.image_url + ')'}\"></div>\n    <div class=\"business-card-content\">\n        <h4 class=\"card-title\">{{ business.name }}</h4>\n        <p class=\"card-text\"> <span class=\"card-label\">Price:</span> {{ business.price }}</p>\n        <p class=\"card-text\"><span class=\"card-label\">Rating:</span> {{ business.rating}} stars</p>\n    </div>\n  </a>\n</div>\n"
 
 /***/ }),
 
@@ -407,7 +407,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "agm-map {\n  height: 500px;\n}\n\n.recommendations-container {\n  padding: 0 20px;\n}\n\n.business-card-container {\n  display: -ms-grid;\n  display: grid;\n  -ms-grid-columns: 1fr;\n      grid-template-columns: 1fr;\n  grid-auto-rows: minmax(150px, 1fr);\n  grid-gap: 10px;\n}\n\n.map-container {\n  margin-bottom: 40px;\n}\n\n@media screen and (min-width: 675px) {\n  .business-card-container {\n    -ms-grid-columns: (1fr)[2];\n        grid-template-columns: repeat(2, 1fr);\n  }\n}\n\n@media screen and (min-width: 925px) {\n  .business-card-container {\n    -ms-grid-columns: (1fr)[3];\n        grid-template-columns: repeat(3, 1fr);\n  }\n}\n", ""]);
+exports.push([module.i, "agm-map {\n  height: 500px;\n}\n\n.recommendations-container {\n  padding: 0 20px;\n}\n\n.business-card-container {\n  display: -ms-grid;\n  display: grid;\n  -ms-grid-columns: 1fr;\n      grid-template-columns: 1fr;\n  grid-auto-rows: minmax(150px, 1fr);\n  grid-gap: 10px;\n}\n\n.map-container {\n  margin-bottom: 40px;\n}\n\n/* ------------------------------------------------------------------------------\n   Responsive style rules for recommendations component\n------------------------------------------------------------------------------ */\n\n@media screen and (min-width: 675px) {\n  .business-card-container {\n    -ms-grid-columns: (1fr)[2];\n        grid-template-columns: repeat(2, 1fr);\n  }\n}\n\n@media screen and (min-width: 925px) {\n  .business-card-container {\n    -ms-grid-columns: (1fr)[3];\n        grid-template-columns: repeat(3, 1fr);\n  }\n}\n", ""]);
 
 // exports
 
@@ -420,7 +420,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/recommendations/recommendations.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"recommendations-container\">\n  <div class=\"map-container\">\n    <h1>Yelp Recommendations for {{ yelpData.businesses[0].location.city }}</h1>\n    <agm-map [latitude]=\"startingLat\" [longitude]=\"startingLong\" [zoom]=\"13\" [scrollwheel]=\"false\">\n      <agm-marker *ngFor=\"let business of yelpData.businesses\" [latitude]=\"business.coordinates.latitude\" [longitude]=\"business.coordinates.longitude\"></agm-marker>\n    </agm-map>\n  </div>\n\n  <div class=\"business-card-container\">\n    <app-business *ngFor=\"let business of yelpData.businesses\" [business]=\"business\"></app-business>\n  </div>\n</div>\n"
+module.exports = "<div class=\"recommendations-container\">\n  <div class=\"map-container\">\n    <h1>Yelp Recommendations for {{ yelpData.businesses[0].location.city }}</h1>\n    <agm-map [latitude]=\"startingLat\" [longitude]=\"startingLong\" [zoom]=\"13\" [scrollwheel]=\"false\">\n      <agm-marker *ngFor=\"let business of yelpData.businesses\" [latitude]=\"business.coordinates.latitude\" [longitude]=\"business.coordinates.longitude\">\n        <agm-info-window>\n          {{ business.name }}\n        </agm-info-window>\n      </agm-marker>\n    </agm-map>\n  </div>\n\n  <div class=\"business-card-container\">\n    <app-business *ngFor=\"let business of yelpData.businesses\" [business]=\"business\"></app-business>\n  </div>\n</div>\n"
 
 /***/ }),
 

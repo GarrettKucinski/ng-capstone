@@ -1,0 +1,39 @@
+{
+      "id": "girl-and-the-goat-chicago",
+      "name": "Girl & the Goat",
+      "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/ya6gjD4BPlxe7AKMj_5WsA/o.jpg",
+      "is_closed": false,
+      "url": "https://www.yelp.com/biz/girl-and-the-goat-chicago?adjust_creative=uysffC3eQhJhlf7owRxTYQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=uysffC3eQhJhlf7owRxTYQ",
+      "review_count": 6546,
+      "categories": [
+        {
+          "alias": "newamerican",
+          "title": "American (New)"
+        }
+      ],
+      "rating": 4.5,
+      "coordinates": {
+        "latitude": 41.8841049992939,
+        "longitude": -87.6479440725005
+      },
+      "transactions": [
+        "restaurant_reservation"
+      ],
+      "price": "$$$",
+      "location": {
+        "address1": "809 W Randolph St",
+        "address2": "",
+        "address3": "",
+        "city": "Chicago",
+        "zip_code": "60607",
+        "country": "US",
+        "state": "IL",
+        "display_address": [
+          "809 W Randolph St",
+          "Chicago, IL 60607"
+        ]
+      },
+      "phone": "+13124926262",
+      "display_phone": "(312) 492-6262",
+      "distance": 3402.0425820377964
+    }
