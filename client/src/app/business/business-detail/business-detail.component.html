@@ -1,9 +1,9 @@
-<a class="btn primary back-to-results" [routerLink]="['/recommendations']"><ng-fa name="angle-double-left"></ng-fa>Back to Results</a>
 <div class="business-detail-container">
   <header>
     <div class="business-title-container" [ngStyle]="{ 'backgroundImage': businessImage}">
       <h1 class="business-title">{{ businessDetails.name }}</h1>
     </div>
+    <a class="btn primary back-to-results" [routerLink]="['/recommendations']"><ng-fa name="angle-double-left"></ng-fa>Back to Results</a>
   </header>
   <div class="business-details column">
       <agm-map [latitude]="latitude" [longitude]="longitude" [zoom]="15" [scrollwheel]="false">
@@ -29,4 +29,3 @@
   </div>
 </div>
 
-    {{businessDetails | json}}
