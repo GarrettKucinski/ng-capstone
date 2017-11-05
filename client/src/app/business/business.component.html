@@ -1,5 +1,5 @@
 <div class="business-card">
-  <a href="">
+  <a [routerLink]="['/', business.id]">
     <div class="business-image-container" [ngStyle]="{ 'backgroundImage': 'url(' +  business.image_url + ')'}"></div>
     <div class="business-card-content">
         <h4 class="card-title">{{ business.name }}</h4>

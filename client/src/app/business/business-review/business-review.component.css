@@ -1,0 +1,42 @@
+li {
+  padding: 20px;
+  background: ghostwhite;
+  border-radius: 5px;
+  color: slategray;
+  margin-bottom: 20px;
+}
+
+.review-header {
+  display: flex;
+}
+
+.usercontainer {
+  width: 50%;
+}
+
+.rating {
+  text-align: right;
+  width: 50%;
+  padding-top: 10px;
+  display: block;
+}
+
+.review-image {
+  display: block;
+  overflow: hidden;
+  border-radius: 50px;
+  background-position: center;
+  height: 50px;
+  width: 50px;
+  float: left;
+  margin-right: 15px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.username {
+  font-weight: bold;
+  display: block;
+  padding-top: 10px;
+  font-size: 1.5rem;
+}

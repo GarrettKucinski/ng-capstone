@@ -8,7 +8,8 @@ import { DataService } from '../services/data.service';
 })
 export class RecommendationsComponent implements OnInit {
     user;
-    yelpData: {} = {};
+    businesses;
+    locationName: string;
     startingLat: string;
     startingLong: string;
     constructor(private dataService: DataService) {}
@@ -20,7 +21,8 @@ export class RecommendationsComponent implements OnInit {
         this.dataService.getReviewData().subscribe(
           // Use data service to get yelp data
             data => {
-              this.yelpData = data;
+              this.businesses = data.businesses;
+              this.locationName = data.businesses[0].location.city;
               this.startingLat = data.businesses[0].coordinates.latitude;
               this.startingLong = data.businesses[0].coordinates.longitude;
             }

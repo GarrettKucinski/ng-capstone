@@ -1,0 +1,44 @@
+agm-map {
+  height: 300px;
+}
+
+.business-title-container {
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  max-height: 300px;
+}
+
+.column {
+  width: 46%;
+  padding: 0 2%;
+  float: left;
+}
+
+.business-reviews.column {
+  float: right;
+}
+
+.business-title {
+  width: 100%;
+  text-align: center;
+  padding: 130px 0;
+  background: rgba(216, 112, 147, .3);
+  text-shadow: 1px 1px 3px #333;
+}
+
+.back-to-results {
+  width: 130px;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.additional-photos {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+.additional-photos li {
+  width: 30%;
+}

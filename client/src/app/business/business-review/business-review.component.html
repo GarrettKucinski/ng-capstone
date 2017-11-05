@@ -1,0 +1,9 @@
+<li>
+  <div class="review-header">
+    <div class="usercontainer">
+      <span class="review-image" [ngStyle]="{'backgroundImage': 'url('+ review.user.image_url +')'}"></span> <span class="username">{{review.user.name}}</span>
+    </div>
+    <span class="rating">{{ review.rating }} stars</span>
+  </div>
+  <p>{{ review.text }}</p>
+</li>

@@ -1,5 +1,4 @@
 <header class="app-header">
-  <h1 *ngIf="!loggedIn">{{ title }}</h1>
   <div *ngIf="loggedIn" class="user-info">
     <span class="user-image"><img src="{{ user.photoUrl }}" alt="photo of user.name"></span> <h2 class="user-name">{{ user.name }}</h2>
   </div>
@@ -10,5 +9,5 @@
   </ul>
 </header>
 
-<hr>
+<hr *ngIf="loggedIn">
 
