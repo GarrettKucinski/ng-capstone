@@ -25,6 +25,7 @@
         "jsonwebtoken": "^8.0.1",
         "mongoose": "^4.11.12",
         "morgan": "~1.8.1",
+        "nodemon": "^1.12.1",
         "passport": "^0.4.0",
         "passport-twitter": "^1.0.4",
         "pug": "^2.0.0-rc.4",
