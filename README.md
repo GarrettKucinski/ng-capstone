@@ -40,3 +40,5 @@ MONGODB_URI
 This variable can be any string you like:
 ```
 SECRET```
+
+after all that and the app is running point your browser to localhost:4200!
