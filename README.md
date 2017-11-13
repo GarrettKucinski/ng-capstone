@@ -29,8 +29,7 @@ npm run dev
 These environment variables will need to be set to successfully run the project:
 ```
 YELP_ACCESS_TOKEN
-YELP_CLIENT_SECRET
-YELP_CLIENT_ID
+
 TWITTER_ACCESS_TOKEN
 TWITTER_ACCESS_TOKEN_SECRET
 TWITTER_CONSUMER_KEY
