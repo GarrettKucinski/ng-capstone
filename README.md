@@ -2,6 +2,8 @@
 
 An app that allows a user to log in with their Twitter credentials and receive custom Yelp recommendations for their areas 50 top rated food places. The user can also select a detailed view which displays some specific information about the location.
 
+View this repo online at [treehouse-capstone.herokuapp.com](treehouse-capstone.herokuapp.com)
+
 ## Technology 
 - NodeJS
 - ExpressJS
